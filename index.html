@@ -11,10 +11,8 @@
         <script>
             console.log('aaaa');
             var path = 'style.scss';
-            var sass = new Sass('sass.worker.js');
-            console.log(sass);
-            sass.compile(path, function(a) {
-            console.log(a);
+            sass.readFile(path, function callback(content) {
+              console.log(content);
             });
         </script>
     </body>
